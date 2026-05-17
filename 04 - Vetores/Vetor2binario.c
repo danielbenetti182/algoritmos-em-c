@@ -1,0 +1,44 @@
+/*
+	Name: vetor2binario.c
+	Author: Daniel Benetti
+	Date: 14/05/26 11:06
+	Description: Programa para carregar um vetor
+					com elementos positivos e negativos
+					e copiar em binário 
+*/
+
+
+#include <stdio.h>
+
+main()
+{
+	int numeros[12], binario[12];
+	int x = 0;
+	
+	puts("Carregue o vetor com 12 numeros positivos ou negativos");
+	for(x; x < 12; x++)
+	{
+		scanf("%d", &numeros[x]);
+	} 
+	
+	//gerando o vetor de binarios - 0's e 1's
+	x = 0;
+	while(x < 12)
+	{
+		if(numeros[x] < 0)
+			binario[x] = 0;
+		else
+			binario[x] = 1;		
+	x++;
+	}
+	
+	//impressão vetor numeros
+	
+	puts("\n\nConteudo do vetor Numeros: ");
+	for (x = 0; x < 12; x++)
+		printf("[%d]", numeros[x]);
+	
+	puts("\n\nConteudo do vetor Binario: ");
+	for (x = 0; x < 12; x++)
+		printf("[%d]", binario[x]);
+}
